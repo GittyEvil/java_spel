@@ -1,3 +1,4 @@
+package Spel;
 import java.awt.Graphics2D;
 
 public abstract class Sprite {
