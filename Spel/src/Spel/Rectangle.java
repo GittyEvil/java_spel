@@ -6,14 +6,17 @@ import java.awt.Graphics2D;
 public class Rectangle extends Sprite{
 
 	private Color color;
+	private int speed;
 	public Rectangle(int x, int y, int width, int height, Color color) {
 		super(x, y, width, height);
 		this.color = color;
+		this.speed = 1;
 	}
 
 	@Override
 	public void update(Keyboard keyboard) {
 		// TODO Auto-generated method stub
+		setY(getY() + this.speed);
 	}
 
 	@Override
