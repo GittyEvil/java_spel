@@ -26,9 +26,10 @@ public class Game {
 		if(this.timer % 40 == 0) {
 			
 		}
-		rekt.update(keyboard);
+		/*rekt.update(keyboard);
 		rekt2.update(keyboard);
-		rekt3.update(keyboard);
+		rekt3.update(keyboard);*/
+		Rectangles.update(keyboard);
 	}
 
 	public void draw(Graphics2D graphics) {
@@ -38,8 +39,10 @@ public class Game {
 		graphics.fillRect(100, 100, 50, 50);
 		 * */
 		
-		rekt.draw(graphics);
+		/*rekt.draw(graphics);
 		rekt2.draw(graphics);
-		rekt3.draw(graphics);
+		rekt3.draw(graphics);*/
+		
+		Rectangles.draw(graphics);
 	}
 }
