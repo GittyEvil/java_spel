@@ -9,12 +9,12 @@ public class SquareCollection {
 	private int antalRektanglar  = 10;
 	
 	//funktionen ska ta in objekten för blue,red,green box å skapa 10 st som rör sig nedåt
-	public SquareCollection(BlueBox rekttyp1,RedBox rekttyp2,GreenBox rekttyp3) {
+	public SquareCollection() {
 		Rectangles = new ArrayList<>();
-		for(int i = 0; i<antalRektanglar ;i++) {
-			Rectangles.add(new BlueBox(20,20,20,20));
-			Rectangles.add(new RedBox(40,20,20,20));
-			Rectangles.add(new GreenBox(60,20,20,20));
+		for(int i = 0; i< antalRektanglar;i++) {
+			Rectangles.add(new BlueBox(20+(i*20),20,20,20));
+			Rectangles.add(new RedBox(40+(i*40),20,20,20));
+			Rectangles.add(new GreenBox(60+(i*60),20,20,20));
 		}
 	}
 	

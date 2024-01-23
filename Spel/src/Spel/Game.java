@@ -14,11 +14,8 @@ public class Game {
 	public Game(GameBoard board) {
 		current = Color.WHITE;
 		this.timer = 0;
-		rekt = new BlueBox(20,20,20,20);
-		rekt2 = new RedBox(40,20,20,20);
-		rekt3 = new GreenBox(60,20,20,20);
-		Rectangles = new SquareCollection(rekt, rekt2, rekt3);
 		
+		Rectangles = new SquareCollection();
 	}
 
 	public void update(Keyboard keyboard) {
