@@ -10,11 +10,12 @@ public class Game {
 	private RedBox rekt2;
 	private GreenBox rekt3;
 	private SquareCollection Rectangles;
+	private Ball boll;
 	
 	public Game(GameBoard board) {
 		current = Color.WHITE;
 		this.timer = 0;
-		
+		boll = new Ball(400,400,20,20);
 		Rectangles = new SquareCollection();
 	}
 
@@ -27,6 +28,7 @@ public class Game {
 		rekt2.update(keyboard);
 		rekt3.update(keyboard);*/
 		Rectangles.update(keyboard);
+		//boll.update(keyboard);
 	}
 
 	public void draw(Graphics2D graphics) {
@@ -41,5 +43,6 @@ public class Game {
 		rekt3.draw(graphics);*/
 		
 		Rectangles.draw(graphics);
+		boll.draw(graphics);
 	}
 }
