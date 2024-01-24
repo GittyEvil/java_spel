@@ -3,12 +3,14 @@ package Spel;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-public class Ball extends Rectangle{
+public class Ball extends Sprite{
 
 	private int speed;
+	private Color color;
 	public Ball(int x, int y, int width, int height) {
-		super(x, y, width, height, Color.gray);
+		super(x, y, width, height);
 		this.speed = 1;
+		this.color = Color.gray;
 	}
 	
 	@Override
