@@ -5,15 +5,28 @@ import java.awt.Graphics2D;
 
 public class Ball extends Rectangle{
 
+	private int speed;
 	public Ball(int x, int y, int width, int height) {
 		super(x, y, width, height, Color.gray);
+		this.speed = 1;
 	}
 	
 	@Override
 	public void update(Keyboard keyboard) {
 		
 		//här ska du fixa så den beror på knapptryck
-		
+		if(keyboard.isKeyDown(Key.Up)) {
+			setY(getY() - this.speed);
+		}
+		if(keyboard.isKeyDown(Key.Down)) {
+			setY(getY() + this.speed);
+		}
+		if(keyboard.isKeyDown(Key.Right)) {
+			setX(getX() + this.speed);
+		}
+		if(keyboard.isKeyDown(Key.Left)) {
+			setX(getX() - this.speed);
+		}
 		
 	}
 

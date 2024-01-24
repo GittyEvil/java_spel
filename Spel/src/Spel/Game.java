@@ -28,7 +28,7 @@ public class Game {
 		rekt2.update(keyboard);
 		rekt3.update(keyboard);*/
 		Rectangles.update(keyboard);
-		//boll.update(keyboard);
+		boll.update(keyboard);
 	}
 
 	public void draw(Graphics2D graphics) {
