@@ -12,9 +12,15 @@ public class SquareCollection {
 	public SquareCollection() {
 		Rectangles = new ArrayList<>();
 		for(int i = 0; i< antalRektanglar;i++) {
-			Rectangles.add(new BlueBox(20+(i*20),20,20,20));
-			Rectangles.add(new RedBox(40+(i*40),20,20,20));
-			Rectangles.add(new GreenBox(60+(i*60),20,20,20));
+			int mellanRum = 20 + i*(30);
+			int bytFärg = i % 3;
+			if(bytFärg == 0) {
+				Rectangles.add(new BlueBox(mellanRum,20,20,20));
+			}else if (bytFärg == 1) {
+				Rectangles.add(new RedBox(mellanRum + 40,20,20,20));
+			}else {
+				Rectangles.add(new GreenBox(mellanRum+2*30,20,20,20));
+			}
 		}
 	}
 	
