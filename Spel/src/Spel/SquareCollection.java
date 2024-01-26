@@ -16,6 +16,7 @@ public class SquareCollection {
 		for(int i = 0; i< antalRektanglar;i++) {
 			int mellanRum = i*(rekMellanrum + rekBredd);
 			int bytFärg = i % 3;
+			//byter färg och lägger bara till 10 st rektanglar totalt
 			if(bytFärg == 0) {
 				Rectangles.add(new BlueBox(190 + mellanRum,20,rekBredd,20));
 			}else if (bytFärg == 1) {
@@ -29,6 +30,10 @@ public class SquareCollection {
 	public void update(Keyboard keyboard) {
 		for (Rectangle rectangle : Rectangles) {
             rectangle.update(keyboard);
+            //tar bort rektanglar från ArrayList ifall de går över 600 alltså höjden på gameboarden
+            if(rectangle.getY() > 600) {
+            	Rectangles.remove(rectangle);
+            }
         }
 	}
 

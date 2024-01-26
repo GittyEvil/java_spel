@@ -16,6 +16,8 @@ public class Rectangle extends Sprite{
 	@Override
 	public void update(Keyboard keyboard) {
 		// TODO Auto-generated method stub
+		
+		//rektanglars rörelse
 		setY(getY() + this.speed);
 	}
 
