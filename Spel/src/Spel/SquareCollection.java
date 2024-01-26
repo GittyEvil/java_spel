@@ -17,11 +17,11 @@ public class SquareCollection {
 			int mellanRum = i*(rekMellanrum + rekBredd);
 			int bytFärg = i % 3;
 			if(bytFärg == 0) {
-				Rectangles.add(new BlueBox(20 + mellanRum,20,rekBredd,20));
+				Rectangles.add(new BlueBox(190 + mellanRum,20,rekBredd,20));
 			}else if (bytFärg == 1) {
-				Rectangles.add(new RedBox(50 + mellanRum,20,rekBredd,20));
+				Rectangles.add(new RedBox(205 + mellanRum,20,rekBredd,20));
 			}else {
-				Rectangles.add(new GreenBox(80 + mellanRum + 2*40,20,rekBredd,20));
+				Rectangles.add(new GreenBox(395 + mellanRum/2 + 2*40,20,rekBredd,20));
 			}
 		}
 	}
