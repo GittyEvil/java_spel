@@ -20,10 +20,12 @@ public class Game {
 	}
 
 	public void update(Keyboard keyboard) {
+		/*
 		this.timer++;
 		if(this.timer % 40 == 0) {
 			
 		}
+		*/
 		/*rekt.update(keyboard);
 		rekt2.update(keyboard);
 		rekt3.update(keyboard);*/

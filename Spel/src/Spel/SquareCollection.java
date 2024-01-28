@@ -2,6 +2,7 @@ package Spel;
 
 import java.awt.Graphics2D;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class SquareCollection {
 
@@ -31,8 +32,18 @@ public class SquareCollection {
 		for (Rectangle rectangle : Rectangles) {
             rectangle.update(keyboard);
             //tar bort rektanglar från ArrayList ifall de går över 600 alltså höjden på gameboarden
+            /*
             if(rectangle.getY() > 600) {
             	Rectangles.remove(rectangle);
+            }
+            */
+            
+        }
+		/*eftersom du inte får ta bort element medans iteration pågår måst denna kod existera*/
+		for(Iterator<Rectangle> itr = Rectangles.iterator();itr.hasNext();) {
+        	Rectangle Block = itr.next();
+        	if(Block.getY() > 600) {
+            	itr.remove();
             }
         }
 	}
