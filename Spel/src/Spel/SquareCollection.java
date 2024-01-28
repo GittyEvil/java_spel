@@ -28,7 +28,7 @@ public class SquareCollection {
 		}
 	}
 	
-	public void update(Keyboard keyboard) {
+	public void update(Keyboard keyboard, GameBoard board) {
 		for (Rectangle rectangle : Rectangles) {
             rectangle.update(keyboard);
             //tar bort rektanglar från ArrayList ifall de går över 600 alltså höjden på gameboarden
@@ -37,12 +37,11 @@ public class SquareCollection {
             	Rectangles.remove(rectangle);
             }
             */
-            
         }
 		/*eftersom du inte får ta bort element medans iteration pågår måst denna kod existera*/
 		for(Iterator<Rectangle> itr = Rectangles.iterator();itr.hasNext();) {
         	Rectangle Block = itr.next();
-        	if(Block.getY() > 600) {
+        	if(Block.getY() > board.getHeight()) {
             	itr.remove();
             }
         }

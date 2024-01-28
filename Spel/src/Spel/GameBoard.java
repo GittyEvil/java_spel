@@ -39,7 +39,7 @@ public class GameBoard extends JComponent {
 
 	public void start() {
 		while(true) {
-			game.update(keyboard);
+			game.update(keyboard, this);
 			try {
 				Thread.sleep(1000 / FPS); //Throttle thread
 			} catch (InterruptedException e) {

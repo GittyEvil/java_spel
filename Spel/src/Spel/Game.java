@@ -19,7 +19,7 @@ public class Game {
 		Rectangles = new SquareCollection();
 	}
 
-	public void update(Keyboard keyboard) {
+	public void update(Keyboard keyboard, GameBoard board) {
 		/*
 		this.timer++;
 		if(this.timer % 40 == 0) {
@@ -29,7 +29,7 @@ public class Game {
 		/*rekt.update(keyboard);
 		rekt2.update(keyboard);
 		rekt3.update(keyboard);*/
-		Rectangles.update(keyboard);
+		Rectangles.update(keyboard, board);
 		boll.update(keyboard);
 	}
 
