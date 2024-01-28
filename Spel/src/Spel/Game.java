@@ -15,8 +15,8 @@ public class Game {
 	public Game(GameBoard board) {
 		current = Color.WHITE;
 		this.timer = 0;
-		boll = new Ball(400,400,20,20);
 		Rectangles = new SquareCollection();
+		boll = new Ball(400,400,20,20);
 	}
 
 	public void update(Keyboard keyboard, GameBoard board) {
@@ -33,7 +33,7 @@ public class Game {
 		boll.update(keyboard);
 	}
 
-	public void draw(Graphics2D graphics) {
+	public void draw(Graphics2D graphics, GameBoard board) {
 		/*
 		 * graphics.setColor(current);
 		graphics.drawString("Halå", 100, 100);
@@ -45,6 +45,8 @@ public class Game {
 		rekt3.draw(graphics);*/
 		
 		Rectangles.draw(graphics);
+		//försöker fixa så bollen inte försvinner när rektanglar försvinner
 		boll.draw(graphics);
+		
 	}
 }

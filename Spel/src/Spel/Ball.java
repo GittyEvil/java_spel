@@ -9,7 +9,7 @@ public class Ball extends Sprite{
 	private Color color;
 	public Ball(int x, int y, int width, int height) {
 		super(x, y, width, height);
-		this.speed = 3;
+		this.speed = 5;
 		this.color = Color.gray;
 	}
 	

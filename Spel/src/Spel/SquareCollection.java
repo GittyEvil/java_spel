@@ -42,7 +42,8 @@ public class SquareCollection {
 		for(Iterator<Rectangle> itr = Rectangles.iterator();itr.hasNext();) {
         	Rectangle Block = itr.next();
         	if(Block.getY() > board.getHeight()) {
-            	itr.remove();
+        		System.exit(0);            	
+        		//itr.remove();
             }
         }
 	}

@@ -10,7 +10,7 @@ public class Rectangle extends Sprite{
 	public Rectangle(int x, int y, int width, int height, Color color) {
 		super(x, y, width, height);
 		this.color = color;
-		this.speed = 5;
+		this.speed = 1;
 	}
 
 	@Override
